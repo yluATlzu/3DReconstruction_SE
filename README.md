@@ -6,6 +6,7 @@ Download Aspire 0.14
 Download Aspire 0.14 Matlab code from http://spr.math.princeton.edu/
 
 Assuming that the Aspire package has been extracted to a folder named $ASPIRE.
+
 Assuming that the files in 3DReconstruction_SE have been copied to a folder named $SE.
 
 Start Matlab and do the following:
@@ -30,20 +31,19 @@ Initialization
 To run the experiments with simulation data
 ----------------------------------------------------
 1. Change into the directory $SE/SimulatedData
-2. Run "testSimulatedData(NumP, SNR)", where the values of NumP and SNR can be choosen from the following:
+2. Run "testSimulatedData(NumP, SNR)", where the values of NumP and SNR can be choosen from the following list:
 
-NumP 	SNR
---------------
-100   0.2
-500   0.2
-1000	0.2
-2000	0.2
-1000	0.1
-1000	0.3
-1000	0.4
-1000	0.5
-1000	1
---------------
+NumP 	  SNR
+_____________
+100     0.2
+500     0.2
+1000	  0.2
+2000	  0.2
+1000	  0.1
+1000	  0.3
+1000	  0.4
+1000	  0.5
+1000	  1
 
 An Example is to run "testSimulatedData(100, 0.2)"
 
