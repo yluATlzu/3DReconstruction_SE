@@ -34,15 +34,25 @@ To run the experiments with simulation data
 2. Run "testSimulatedData(NumP, SNR)", where the values of NumP and SNR can be choosen from the following list:
 
 NumP 	  SNR
+
 100     0.2
+
 500     0.2
+
 1000	  0.2
+
 2000	  0.2
+
 1000	  0.1
+
 1000	  0.3
+
 1000	  0.4
+
 1000	  0.5
+
 1000	  1
+
 
 An Example is to run "testSimulatedData(100, 0.2)"
 
