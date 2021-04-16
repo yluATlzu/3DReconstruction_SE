@@ -17,7 +17,11 @@ if ~exist('ref_map_emd_3508.mrc', 'file')
 end
 
 refqFileName = ['refq', num2str(numPtcls), '.mat'];
-load(refqFileName, 'refq');
+if ~exist(refqFileName, 'file')
+    refq=qrand(numPtcls);  % Generate random uniform quaternions.
+else
+    load(refqFileName, 'refq');
+end
 
 precision='single';
 cleanprojs=cryo_project(volref, qs_to_rots(refq, 1), n, precision); 
