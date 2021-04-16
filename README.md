@@ -1,6 +1,4 @@
-# 3DReconstruction_SE
-
-[How to run the 3D Reconstruction with Spherical Embedding ]
+# How to do 3D Reconstruction with Spherical Embedding
 
 ----------------------------------------------------
 Download Aspire 0.14 
