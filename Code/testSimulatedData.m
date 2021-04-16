@@ -19,7 +19,7 @@ mrcSychfileName = ['MrcSychronization-', num2str(numPtcls), 'p@SNR=', num2str(sn
 mrcSEfileName = ['MrcSE-', num2str(numPtcls), 'p@SNR=', num2str(snr), '.mrc'];
 
 % Compute common lines
-if ~isfile(CLfileName)
+if ~exist(CLfileName, 'file')
     Preprocess_CompCls_V0_14( inputfileName, CLfileName, 0);
     pause(5);
 end
