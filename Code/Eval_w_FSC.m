@@ -34,6 +34,6 @@ freqs = [1:ns]/(n*apix);
 % hold;
 % plot(freqs, ones(ns,1)*0.143, 'r--');
 % plot(freqs, ones(ns,1)*0.5, 'r--');
-% title(['FSC curve for ', ConstructedVolFileNM]);
+% title(['FSC curve for ', ConstructedVolFileNM], 'Interpreter','none');
 
 end

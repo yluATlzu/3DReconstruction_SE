@@ -60,7 +60,7 @@ plot(freqs, fscSych, 'g');
 ns = size(freqs, 2);
 plot(freqs, ones(ns,1)*0.143, 'r--');
 plot(freqs, ones(ns,1)*0.5, 'r--');
-title(inputfileName);
-legend('SE_OurVer7','LUD', 'Syc');
+title(inputfileName, 'Interpreter','none');
+legend('SE-OurVer7','LUD', 'Syc');
 
 end

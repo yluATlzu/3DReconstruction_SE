@@ -24,11 +24,11 @@ end
 %% Evaluation 
 % Evaluating alpha beta 
 % figure; plot(refDist(:), predDist(:),'.'); 
-% title(['Evaluating alpha beta for ', PredictionResultFileName]);
+% title(['Evaluating alpha beta for ', PredictionResultFileName], 'Interpreter','none');
 
 % Evaluating gamma 
 % figure; plot(refDistXaxes(:), predDistXaxes(:), '.'); 
-% title(['Evaluating gamma for ', PredictionResultFileName]);
+% title(['Evaluating gamma for ', PredictionResultFileName], 'Interpreter','none');
 
 % Evaluating all angles 
 flagInv =1;
