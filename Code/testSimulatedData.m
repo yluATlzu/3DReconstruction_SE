@@ -48,7 +48,8 @@ pause(5);
 outputfileName = ['Results_All_', num2str(numPtcls), 'p@SNR=', num2str(snr), '.mat'];
 
 save(outputfileName, 'refDist', 'predDistLUD', 'predDistSych', 'predDistSE', ...
-    'mseLUD', 'mseSych', 'mseSE', 'freqs', 'fscLUD', 'fscSych', 'fscSE');
+    'mseLUD', 'mseSych', 'mseSE', 'freqs', 'fscLUD', 'fscSych', 'fscSE', ...
+    'PredRotationsLUD', 'PredRotationsSync', 'PredRotationsSE');
 
 
 %% plot the FSC curves
