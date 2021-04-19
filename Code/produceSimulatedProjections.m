@@ -19,6 +19,7 @@ end
 refqFileName = ['refq', num2str(numPtcls), '.mat'];
 if ~exist(refqFileName, 'file')
     refq=qrand(numPtcls);  % Generate random uniform quaternions.
+    save(refqFileName, 'refq');
 else
     load(refqFileName, 'refq');
 end

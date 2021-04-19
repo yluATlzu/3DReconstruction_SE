@@ -26,14 +26,12 @@ Initialization
 3. Change into the directory $SE
 4. Run 'initSEPath'  (This needs to be run each time you start Matlab session)
 
-
 ----------------------------------------------------
 To run the experiments with simulation data
 ----------------------------------------------------
 1. Change into the directory $SE/SimulatedData
 2. Run 'produceSimulatedProjections(NumP, SNR)', where the values of NumP and SNR can be choosen from the following list
 2. Run 'testSimulatedData(NumP, SNR)', where the values of NumP and SNR can be choosen from the following list
-
 
 NumP 	  SNR
 
@@ -55,12 +53,10 @@ NumP 	  SNR
 
 1000	  1
 
-
 An Example: to test reconstruction from 100 images with SNR=0.2
 
  1. run  'produceSimulatedProjections(100,0.2)' 
  2. run 'testSimulatedData(100, 0.2)'
-
 
 ----------------------------------------------------
 To run the experiments with the real data
