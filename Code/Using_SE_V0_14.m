@@ -1,4 +1,4 @@
-function [PredRotations, volConstructed] = Using_SE_V0_14(inputFileName, outputMRCFileName, apix, refqFileName)
+function [PredRotations, volConstructed, votedAngle] = Using_SE_V0_14(inputFileName, outputMRCFileName, apix, refqFileName)
 % The Input file should be the file produced by Preprocess_CompCls_V0_14.m
 % The output MRC file contains the constructed volume
 % apix is pixA
@@ -21,7 +21,7 @@ est_shifts = full(reshape(est_shifts, 2, K)');
 
 log_message('Estimating projection angles using Spherical Embedding');
 
-PredRotations  = ComputeAnglesFromProjs_SE_Ver7(clstack, corrstack);
+[PredRotations,  votedAngle] = ComputeAnglesFromProjs_SE_Ver7(clstack, corrstack);
 
 if (nargin>3)
     load(refqFileName, 'refq');

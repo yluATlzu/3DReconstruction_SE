@@ -29,7 +29,7 @@ PredRotationsLUD = Using_LUD_V0_14( CLfileName, mrcLUDfileName, 1.084, refqFileN
 pause(5);
 PredRotationsSync = Using_Sychronization_V0_14( CLfileName, mrcSychfileName, 1.084, refqFileName);
 pause(5);
-PredRotationsSE = Using_SE_V0_14( CLfileName, mrcSEfileName, 1.084, refqFileName);
+[PredRotationsSE, ~, votedAngle] = Using_SE_V0_14( CLfileName, mrcSEfileName, 1.084, refqFileName);
 pause(5);
 
 %% Evaluation of the predicted angles 
@@ -49,7 +49,7 @@ outputfileName = ['Results_All_', num2str(numPtcls), 'p@SNR=', num2str(snr), '.m
 
 save(outputfileName, 'refDist', 'predDistLUD', 'predDistSych', 'predDistSE', ...
     'mseLUD', 'mseSych', 'mseSE', 'freqs', 'fscLUD', 'fscSych', 'fscSE', ...
-    'PredRotationsLUD', 'PredRotationsSync', 'PredRotationsSE');
+    'PredRotationsLUD', 'PredRotationsSync', 'PredRotationsSE', 'votedAngle');
 
 
 %% plot the FSC curves
