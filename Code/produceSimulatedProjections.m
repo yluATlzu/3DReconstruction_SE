@@ -25,7 +25,8 @@ else
 end
 
 precision='single';
-cleanprojs=cryo_project(volref, qs_to_rots(refq, 1), n, precision); 
+cleanprojs=cryo_project(volref, qs_to_rots(refq, 0), n, precision); 
+
 noisy_projs=cryo_addnoise(cleanprojs, snr, 'gaussian');
 
 outputDatafilename = ['EMD3508_', num2str(numPtcls), 'particles@SNR=', num2str(snr), '.mrcs'];
