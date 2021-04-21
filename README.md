@@ -11,12 +11,14 @@ Assuming that the files in 3DReconstruction_SE have been copied to a folder name
 
 Start Matlab and do the following:
 
+
 ----------------------------------------------------
 Installation
 ----------------------------------------------------
 1. Change into the directory $ASPIRE
 2. Run 'initpath'
 3. Run 'install' to install ASPIRE (This only needs to be run once)
+
 
 ----------------------------------------------------
 Initialization
@@ -25,6 +27,7 @@ Initialization
 2. Run 'initpath' (This needs to be run each time you start Matlab session)
 3. Change into the directory $SE
 4. Run 'initSEPath'  (This needs to be run each time you start Matlab session)
+
 
 ----------------------------------------------------
 To run the experiments with simulation data
@@ -57,6 +60,11 @@ An Example: to test reconstruction from 100 images with SNR=0.2
 
  1. run  'produceSimulatedProjections(100,0.2)' 
  2. run 'testSimulatedData(100, 0.2)'
+
+To computie RSME in degrees from MSE in radians, the following formula can be used:
+
+RMSE = sqrt(MSE)*180/pi
+
 
 ----------------------------------------------------
 To run the experiments with the real data
