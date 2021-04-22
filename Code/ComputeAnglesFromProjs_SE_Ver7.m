@@ -1,10 +1,9 @@
+function [PredRotations, votedAngle]= ComputeAnglesFromProjs_SE_Ver7( clstack, corrstack)
 %
 % Computing Projection Angles from Input Images
 %
 % Author: Yonggang Lu (ylu@lzu.edu.cn)
 % 2019/11
-
-function [PredRotations, votedAngle]= ComputeAnglesFromProjs_SE_Ver7( clstack, corrstack)
 
 %  compute maxh and votedAngle
 K=size(clstack,2);

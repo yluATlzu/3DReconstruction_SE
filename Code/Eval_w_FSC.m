@@ -1,7 +1,6 @@
 function [fscCurve, freqs] = Eval_w_FSC(RefVolFileNM, ConstructedVolFileNM, apix, flagAligned)
-% !! NEED set to actual APIX
-%  apix = 1.084 for DataEMD3508
-%  apix = 2.68 for the real dataset
+% Evaluation using FSC
+%  apix needs to be set to actual APIX
 %  flagAligned is optional, default is false; if true, no density alignment is performed 
 
 % Author: Yonggang Lu (ylu@lzu.edu.cn)

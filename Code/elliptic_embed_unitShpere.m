@@ -1,23 +1,23 @@
 function [ydata,e]=elliptic_embed_unitShpere(D, weights, x, initSolution)
-% [Z,r]=elliptic_embed(D) computes the weighted embedding of points into a elliptic space
-% such that the distances are given by D
-% Z is the inner-product (kernel) matrix of the points, r the radius of
-% curvature of the space
-% The embedded point positions can be found from Z=VEV^T
-% (eigendecomposition) and X=r*V*sqrt(max(E,0))
-% 
-% Will attempt to optimize the resulting embedding to improve the result. 
-% This may take some time on large datasets.
-% Method used is an efficient optimisation method based on gradient descent
-% on the tanget plane
+% The function will attempt to find an embedding of the points, whose distance matrix 
+% is given by D, into a unit spherical surface in (x+1)-dimensional space. 
+% The surface itself is actually x-dimensional.
 %
-% weights: weights[i,j] gives the weight for D[i,j] 
+% D: input distance matrix
+% weights: weights[i,j] gives the weight for D[i,j]
+% x: dimension of spherical surface
+% initSolution: initial solution
 %
-% [Z,r]=elliptic_embed(D, weights, x) will attempt to find an embedding into 
-% x-dimensional spherical space. The embedding space will be (x+1)-dimensional
-%  weights: weights[i,j] gives the weight for D[i,j]
+% The Matlab code is a modified version of the code for the spherical and 
+% hyperbolic embedding described in the paper:
+% "Spherical and Hyperbolic Embeddings of Data", Richard C. Wilson, 
+% Edwin R. Hancock, Elzbieta Pekalska, Robert P.W. Duin,
+% IEEE Transactions on Pattern Analysis and Machine Intelligence, 2014
 %
-% Modified by Yonggang Lu (ylu@lzu.edu.cn) @2018/4/5
+% The optimization method used is an efficient optimisation method based on gradient descent
+% on the tanget plane.
+
+% Modified by Yonggang Lu (ylu@lzu.edu.cn) @ 2018/4/5
 
 sz=size(D,1);
 

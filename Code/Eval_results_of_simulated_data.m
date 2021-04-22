@@ -1,6 +1,6 @@
 function [MSE_angle, refDist, predDist] = Eval_results_of_simulated_data(refqFileName, PredRotations)
 % Evaluation of the projection angle results of the simulated data
-% refqFileName - file stores reference rotations by quaterniona
+% refqFileName - file stores reference rotations by quaternions
 % PredRotations - file stores predicted rotation matrices
 
 % Author: Yonggang Lu (ylu@lzu.edu.cn)
