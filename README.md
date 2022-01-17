@@ -70,9 +70,9 @@ RMSE = sqrt(MSE)*180/pi
 To run the experiments with the real data
 ----------------------------------------------------
 1. Change into the directory $SE/RealData/EMPIAR-10028
-2. Run 'testRealData('EMPIAR-10028')
+2. Run testRealData('EMPIAR-10028')
 3. Change into the directory $SE/RealData/EMPIAR-10328
-4. Run 'testRealData('EMPIAR-10328')
+4. Run testRealData('EMPIAR-10328')
 
 
 
