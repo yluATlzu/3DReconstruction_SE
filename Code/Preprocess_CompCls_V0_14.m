@@ -1,4 +1,4 @@
-function Preprocess_CompCls_V0_14( inputFileName,  outputFileName, max_shift)
+function Preprocess_CompCls_V0_14( inputFileName,  outputFileName, max_shift, flag_normalization)
 % The input file is the MRC file containing the projection images
 % The output file contains the estimated common lines and the the projection images
 % max_shift=5 for real data and max_shift=0 for Simulated data
@@ -8,18 +8,25 @@ function Preprocess_CompCls_V0_14( inputFileName,  outputFileName, max_shift)
 % 
 % Author: Yonggang Lu (ylu@lzu.edu.cn)
 % 2019/11
+if (nargin<=3)
+    flag_normalization = true;
+end
+
 
 noisy_projs = ReadMRC(inputFileName);
 
 [n, ~, K] = size(noisy_projs); % size of the volume: nXnXn
 
 % normalization - YLU, added on 20/8/2018
-meanSum = sum(noisy_projs(:))/K;
-for i=1:K
-    tmp=noisy_projs(:,:,i);
-    rateSum=meanSum/sum(tmp(:));
-    noisy_projs(:,:,i) = noisy_projs(:,:,i)*rateSum;
+if flag_normalization
+    meanSum = sum(noisy_projs(:))/K;
+    for i=1:K
+        tmp=noisy_projs(:,:,i);
+        rateSum=meanSum/sum(tmp(:));
+        noisy_projs(:,:,i) = noisy_projs(:,:,i)*rateSum;
+    end
 end
+
 masked_projs=mask_fuzzy(noisy_projs,ceil(n/2)); % Applly circular mask
 
 %% Compute polar Fourier transform, using radial resolution n_r and angular
