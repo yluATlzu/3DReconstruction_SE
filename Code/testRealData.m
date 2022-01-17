@@ -11,7 +11,7 @@ function testRealData(realdata_name)
 if strcmp(realdata_name, 'EMPIAR-10028')
     apix = 2.68;
     refmapFnm = 'Ref_map_emd_2660.mrc';
-    Preprocess_CompCls_V0_14( '10028_531p.mrcs',  'RealProjectionCLstack.mat', 5);
+    Preprocess_CompCls_V0_14( '10028_531p.mrcs',  'RealProjectionCLstack.mat', 5, false);
 elseif strcmp(realdata_name, 'EMPIAR-10328')
     apix = 1.059;
     refmapFnm = 'emd_22689.map';
